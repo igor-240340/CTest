@@ -1,19 +1,13 @@
 #include <avr/io.h>
 
-int main () {
-    DDRB = 0xFF;    // PORTB - out
-
-    char* str;
-    str = (char*) malloc(12);
-    strcpy(str, "Hello world");
-
-    for (int i = 0; i < 11; i++) {
-        PORTB = str[i];
-    }
-
-    free(str);
+long int sum(long int a, long int b, long int c) {
+    return a + b + c;
 }
 
+int main () {
+    long int a = 123124234;
+    long int b = 123124235;
+    long int c = 123124236;
 
-
-
+    long int res = sum(a, b, c);
+}
